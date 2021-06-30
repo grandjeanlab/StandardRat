@@ -33,10 +33,10 @@ This is a sub-project of the [multiRAT collaboration](https://github.com/grandje
 Two forms exist, one for logging the data, and one to assist with Burker 2 [Bids](https://bids.neuroimaging.io/) conversion. Non-bruker users may consider dicom to [BIDS converter](https://github.com/Donders-Institute/bidscoin)  instead.  
 
 - **Basic report sheet.**    
-[link to gdoc sheet](https://docs.google.com/spreadsheets/d/1XTpR9kzGYfmFkvJUGIgkbxjZsCw-vzUnvzgGN_Aqj3g/edit?usp=sharing)
+[.csv](assets/table/StandardRat_template.csv) [.xlsx](assets/table/StandardRat_template.xlsx)) [link to gdoc sheet](https://docs.google.com/spreadsheets/d/1XTpR9kzGYfmFkvJUGIgkbxjZsCw-vzUnvzgGN_Aqj3g/edit?usp=sharing)
 
 - **Scan info sheet for Burker to BIDS conversion.** Adapted from [BrkRaw](https://github.com/BrkRaw/brkraw)   
-[link to gdoc sheet](https://docs.google.com/spreadsheets/d/1fvK3-pSJDSovD3FhTMdtu1J8vPZPb8FRBgkEZqVSg8o/edit?usp=sharing)
+[.csv](assets/table/StandardRat_study_2_bids.csv) [.xlsx](assets/table/StandardRat_study_2_bids.xlsx)) [link to gdoc sheet](https://docs.google.com/spreadsheets/d/1fvK3-pSJDSovD3FhTMdtu1J8vPZPb8FRBgkEZqVSg8o/edit?usp=sharing)
 </p>
 </details>
 
