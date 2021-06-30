@@ -41,11 +41,11 @@ Two forms exist, one for logging the data, and one to assist with Burker 2 [Bids
 </details>
 
 ## Anesthesia
+![Anesthesia graphical summary](assets/img/anesthesia_summary.png)   
+**Anesthesia graphical summary.** *Courtesy BIL@UAnterp*  
+
 <details><summary><b>Click to expand</b></summary>
 <p>
-![Anesthesia graphical summary](assets/img/anesthesia_summary.png)   
-**Anesthesia graphical summary.** *Courtesy BIL@UAnterp*   
-
 ### General remarks
 * Subcutaneous injection & infusion (skin fold at the back of the rat, perform bolus on the opposite side of where the infusion cannula will be)   
 * Isoflurane is in a mixture of 200mL/min O2 & 400mL/min N2   
