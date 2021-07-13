@@ -1,8 +1,7 @@
 # StandardRat Protocol version 0.2
 
 ## Context
-<details><summary><b>Click to expand</b></summary>
-<p>
+
 This is a sub-project of the [multiRAT collaboration](https://github.com/grandjeanlab/MultiRat). The aim of this project is the develop a robust, standardized, and minimal rat resting-state fMRI protocol. 
 
 * **Robust:** the protocol should operate on systems operating at 4.7T to 11.7T (or above) field strength, and should be geared toward maximizing functional connectivity specificity (target 75% FC specificity within dataset). FC specificity is defined as high homotopic contralateral FC (S1-S1, r > 0.1) and low task-positive to task-negative FC (S1-ACA, r < 0.1). 
@@ -11,12 +10,10 @@ This is a sub-project of the [multiRAT collaboration](https://github.com/grandje
 
 * **Minimal:** This should be an out-of-the-box protocol using sequences and animal procedures available in most (all) laboratories. 
 
-</p>
-</details>
+
 
 ## Protocol requirements 
-<details><summary><b>Click to expand</b></summary>
-<p>
+
 - The protocol should take no longer than 1 h per rat to complete.   
 - The protocol should run on a 4.7T with a standard cross-coil setup (The Andy Hess benchmark).   
 - The protocol should work under various coil configurations (cross-coil, single-loop, phased-array).   
@@ -24,8 +21,7 @@ This is a sub-project of the [multiRAT collaboration](https://github.com/grandje
 - The repetition time should be 1 s or less.   
 - The protocol is designed for Wistar rats (mixed-sex, ~200-300g, or 2-4 months) but should be adaptable to other strains, weight.   
 - Rats should be under (light) anesthesia and free-breathing to accommodate regulations from all countries.   
-</p>
-</details>
+
 
 ## Reporting
 <details><summary><b>Click to expand</b></summary>
@@ -33,10 +29,15 @@ This is a sub-project of the [multiRAT collaboration](https://github.com/grandje
 Two forms exist, one for logging the data, and one to assist with Burker 2 [Bids](https://bids.neuroimaging.io/) conversion. Non-bruker users may consider dicom to [BIDS converter](https://github.com/Donders-Institute/bidscoin)  instead.  
 
 - **Basic report sheet.**    
-[.csv](assets/table/StandardRat_template.csv) [.xlsx](assets/table/StandardRat_template.xlsx)) [link to gdoc sheet](https://docs.google.com/spreadsheets/d/1XTpR9kzGYfmFkvJUGIgkbxjZsCw-vzUnvzgGN_Aqj3g/edit?usp=sharing)
+[.csv](assets/table/StandardRat_template.csv) [.xlsx](assets/table/StandardRat_template.xlsx)) [gdoc sheet](https://docs.google.com/spreadsheets/d/1XTpR9kzGYfmFkvJUGIgkbxjZsCw-vzUnvzgGN_Aqj3g/edit?usp=sharing)   
 
 - **Scan info sheet for Burker to BIDS conversion.** Adapted from [BrkRaw](https://github.com/BrkRaw/brkraw)   
-[.csv](assets/table/StandardRat_study_2_bids.csv) [.xlsx](assets/table/StandardRat_study_2_bids.xlsx)) [link to gdoc sheet](https://docs.google.com/spreadsheets/d/1fvK3-pSJDSovD3FhTMdtu1J8vPZPb8FRBgkEZqVSg8o/edit?usp=sharing)
+[.csv](assets/table/StandardRat_study_2_bids.csv) [.xlsx](assets/table/StandardRat_study_2_bids.xlsx)) [gdoc sheet](https://docs.google.com/spreadsheets/d/1fvK3-pSJDSovD3FhTMdtu1J8vPZPb8FRBgkEZqVSg8o/edit?usp=sharing)    
+
+
+**Protocol deviations**
+Protocol deviations due to local constraints can be reported in the table above __**Anesthesia_deviation**__ and __**Func_deviation**__ for anesthesia and acquisition deviations, respectively. 
+
 </p>
 </details>
 
@@ -48,7 +49,7 @@ Two forms exist, one for logging the data, and one to assist with Burker 2 [Bids
 <p>
 ### General remarks    
 * Subcutaneous injection & infusion (skin fold at the back of the rat, perform bolus on the opposite side of where the infusion cannula will be)   
-* Isoflurane is in a mixture of 200mL/min O2 & 400mL/min N2   
+* Isoflurane is in a mixture of 200mL/min O2 & 400mL/min N2 (or 100 ml/min & 500 mL/min Air)   
 
 ### Products
 * 1mL syringes    
@@ -59,6 +60,9 @@ Two forms exist, one for logging the data, and one to assist with Burker 2 [Bids
 * Medetomine (Domitor ®1 mg/mL). __If using Dexdetomine, use half-dose__   
 * Infusion pump   
 * Scale   
+* Saline
+* (optional) Super glue or tissue glue (to fixate s.c. catheter from moving/leaking)
+
 
 ### Dilutions
 Infusion-line = pure domitor (1 mg/mL)
@@ -113,6 +117,9 @@ Let the animal recover under the infrared light
 ## MRI protocol 
 <details><summary><b>Click to expand</b></summary>
 <p>
+*Guide*   
+Bruker (PV6, 7T) [picture guide](Bruker_guide.md) for slice position and parameter cards.     
+
 *Equipment*   
 Any field strength. Refer to the table to B0-dependant parameters   
 Any coil. Refer to the instruction for T/R surface coil-only   
@@ -141,11 +148,18 @@ slice thickness = 1 mm
 slice gap = 0.1 mm   
 slice order = interleaved  
 
+
+![Slice package](assets/bruker/slice_position_PV6_7T.png)    
+Location of the slice package, to be copied to the GE-EPI geometry.    
+
 *Shimming*   
 Shimming with MAPSHIM following B0 maps acquisition.   
 Shimming is performed on an ellipsoid (*optional, PV6 and above*) or rectangle/square voxel into the cerebrum.(reference images pending).    
 It is recommended to run a single volume GE-EPI scan to ensure distortions are minimal before running the full GE-EPI functional scan.  
-Shimming performance can be tested using a PRESS voxel (*XX x XX x XX mm, procedure detail pending*)   
+Shimming performance can be tested using a PRESS voxel (*5 x 5 x 5 mm, centered in the cerebrum*) and measuring line width.   
+
+![SHIM package](assets/bruker/shim_position_PV6_7T.png)    
+Location of the shim voxel. Preferably, the shim voxel should eb ~10% smaller, and the voxel boundaries should cross brain boundaries.      
 
 *Functional*   
 Single shot, single echo, gradient echo - echo planar image (GE-EPI) sequence    
@@ -171,13 +185,22 @@ Acceleration = No
 | ---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | TE [ms] | 30 | 25 | 17 | 15 | 12 | 10 | 
 | FA [degree] | 64 | 61 | 55 | 53 | 52 | 51 | 
-| Bandwidth [kHz] | 250 | 250 | 250 | 250 | 250 | 250 | 
+| Bandwidth [kHz] | 180 | 200 | 220 | 250 | 250 | 300 | 
 
-T1 values used the following values [1000, 1400, 1800, 2000, 2100, 2200], based on the values [here](https://pubmed.ncbi.nlm.nih.gov/16767752/), and [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7248563/), and used the [mritoolbox]( http://www.mritoolbox.com/ErnstAngle.html) to estimate angles   
+T1 values used the following values [1000, 1400, 1800, 2000, 2100, 2200], based on the values [here](https://pubmed.ncbi.nlm.nih.gov/16767752/), and [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7248563/), and used the [mritoolbox](http://www.mritoolbox.com/ErnstAngle.html) to estimate angles   
 
 TE is based on the ~ half T2* in the grey matter. Unfortunately, I couldn’t find this parameter in the rat brain as a function of B0. [This](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.20946) only reports T2. Currently, proposed values are based on user usage.  
+</p>
+</details>
 
-Bandwidth. Not sure if it needs to be adjusted as a function of B0. Tested on 11.7T with BGA-S. Feedback are welcome. 
+
+## Selected outcomes (left anatomical, right functional)  
+<details><summary><b>Click to expand</b></summary>
+<p>
+![2_outcome](assets/bruker/2_anat_EPI_PV6_7T.png)    
+![4_outcome](assets/bruker/4_anat_EPI_PV6_7T.png)    
+![6_outcome](assets/bruker/6_anat_EPI_PV6_7T.png)   
 
 
-
+</p>
+</details>
