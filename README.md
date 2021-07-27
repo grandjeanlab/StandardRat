@@ -49,7 +49,7 @@ Protocol deviations due to local constraints can be reported in the table above 
 <p>
 ### General remarks    
 * Subcutaneous injection & infusion (skin fold at the back of the rat, perform bolus on the opposite side of where the infusion cannula will be)   
-* Isoflurane is in a mixture of 200mL/min O2 & 400mL/min N2 (or 100 ml/min & 500 mL/min Air)   
+* Isoflurane is in a mixture of 200mL/min O2 & 400mL/min N2 (or 100 ml/min O2 & 500 mL/min Air)   
 
 ### Products
 * 1mL syringes    
@@ -65,15 +65,15 @@ Protocol deviations due to local constraints can be reported in the table above 
 
 
 ### Dilutions
-Infusion-line = pure domitor (1 mg/mL)
-* Speed of the pump in mL/hr = weight in kg/10   
+Infusion-line = pure domitor (1 mg/mL)   
+* Speed of the pump in mL/hr => weight in kg/10     
     * E.g., 300g rat = 0.030 mL/hr  
-Bolus = 1/10 solution of medetomine in 0.9% NaCl solution
-* Injection volume in mL = weight in kg/2
+Bolus = 1/10 solution of medetomine in 0.9% NaCl solution   
+* Injection volume in mL => weight in kg/2   
     * E.g., 300g rat = 0.150 mL    
-Atipamezole (Antisedan)
-* 1/10 dilution (0.5 mg/mL)
-* Injection volume in mL = weight in kg
+Atipamezole (Antisedan)   
+* 1/10 dilution (0.5 mg/mL)   
+* Injection volume in mL => weight in kg   
     * E.g., 300g rat = 0.300 mL Antisedan
     
 ### Anesthesia protocol
@@ -86,7 +86,7 @@ Atipamezole (Antisedan)
 
 *Animal handling/positioning of the animal*   
 * Max 10 minutes (aim for as short as possible – just practice the positioning of the animal)   
-* 2-2.5% ISF in mixture of 200mL/min O2 & 400mL/min N2   
+* 2-2.5% ISF in mixture of 200mL/min O2 & 400mL/min N2 
 
 *T0 min*   
 * Subcutaneous bolus of 0.05 mg/kg medetomidine (Domitor®)   
@@ -181,11 +181,11 @@ Acceleration = No
 
 *Variable parameters*   
 
-|  | 3T | 4.7T | 7T | 9.4T   | 11.7T  | 14.1T | 
-| ---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| TE [ms] | 30 | 25 | 17 | 15 | 12 | 10 | 
-| FA [degree] | 64 | 61 | 55 | 53 | 52 | 51 | 
-| Bandwidth [kHz] | 180 | 200 | 220 | 250 | 250 | 300 | 
+|  | 3T | 4.7T | 7T | 9.4T   | 11.7T  | 14.1T | 17.2T | 
+| ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| TE [ms] | 30 | 25 | 17 | 15 | 12 | 10 | 9 | 
+| FA [degree] | 64 | 61 | 55 | 53 | 52 | 51 | 50 | 
+| Bandwidth [kHz] | 180 | 200 | 220 | 250 | 250 | 300 | 300 | 
 
 T1 values used the following values [1000, 1400, 1800, 2000, 2100, 2200], based on the values [here](https://pubmed.ncbi.nlm.nih.gov/16767752/), and [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7248563/), and used the [mritoolbox](http://www.mritoolbox.com/ErnstAngle.html) to estimate angles   
 
