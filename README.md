@@ -197,9 +197,13 @@ TE is based on the ~ half T2* in the grey matter. Unfortunately, I couldn’t fi
 ## Selected outcomes (left anatomical, right functional)  
 <details><summary><b>Click to expand</b></summary>
 <p>
-![2_outcome](assets/bruker/2_anat_EPI_PV6_7T.png)    
+
+![2_outcome](assets/bruker/2_anat_EPI_PV6_7T.png)   
+
 ![4_outcome](assets/bruker/4_anat_EPI_PV6_7T.png)    
-![6_outcome](assets/bruker/6_anat_EPI_PV6_7T.png)   
+
+![6_outcome](assets/bruker/6_anat_EPI_PV6_7T.png)    
+
 
 
 </p>
