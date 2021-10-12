@@ -140,10 +140,10 @@ FA = 90, 180
 FOV = 25.6 x 25.6 mm    
 Matrix size = 128 x 128   
 FOV sat = yes (no if using T/R surface coil)   
-FOV sat geometry = 15 mm positioned below the skull  (reference image for slice position pending)   
+FOV sat geometry = 15 mm positioned below the skull  (see image below)   
 Fat sat = yes   
 Read-out = LR   
-number of slice = 18 (reference image for slice position pending)   
+number of slice = 18 (see image below)   
 slice thickness = 1 mm   
 slice gap = 0.1 mm   
 slice order = interleaved  
@@ -154,7 +154,7 @@ Location of the slice package, to be copied to the GE-EPI geometry.
 
 *Shimming*   
 Shimming with MAPSHIM following B0 maps acquisition.   
-Shimming is performed on an ellipsoid (*optional, PV6 and above*) or rectangle/square voxel into the cerebrum.(reference images pending).    
+Shimming is performed on an ellipsoid (*optional, PV6 and above*) or rectangle/square voxel into the cerebrum.(see image below).    
 It is recommended to run a single volume GE-EPI scan to ensure distortions are minimal before running the full GE-EPI functional scan.  
 Shimming performance can be tested using a PRESS voxel (*5 x 5 x 5 mm, centered in the cerebrum*) and measuring line width.   
 
@@ -168,7 +168,7 @@ TR = 1000ms
 FOV = 25.6 x 25.6 mm   
 matrix size =  64 x 64   
 FOV sat = yes (no if using transmit/receive surface coil)   
-FOV sat geometry = 15 mm positioned below the skull  (reference image for slice position pending)   
+FOV sat geometry = 15 mm positioned below the skull  ()   
 Fat sat = yes   
 Read-out = LR   
 number of slice = 18    
