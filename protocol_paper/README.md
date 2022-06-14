@@ -4,7 +4,7 @@ Here follows a basic outline of the protocol paper (based on directions from Nat
 The same outline is also visible in the working MS (https://docs.google.com/document/d/1gtDowoHpHfgLS4g7COVsLYgXEw9P94OhTK4kd63vubU/edit?usp=sharing) (contact Roel.Vrooman@radboudumc.nl to be added to the file)
 
 **Working Title**
-Standardized Protocol for Awake Rat functional Magnetic Resonance Imaging and Data Analysis
+Standardized Protocol for Anesthethized Rat functional Magnetic Resonance Imaging and Data Analysis
 
 **Authors**
 
@@ -17,7 +17,6 @@ Standardized Protocol for Awake Rat functional Magnetic Resonance Imaging and Da
 
 - **Applications of the method**
     - rsfMRI Rat
-    - Simple behavioral paradigm Rat
     - Suitable for mice / other rodents? 	
 
 - **Comparison with other methods**
@@ -34,7 +33,7 @@ Standardized Protocol for Awake Rat functional Magnetic Resonance Imaging and Da
     - Animal handling/husbandry	
 
 - Limitations
-    - Restrained Rats, only simple behavior
+    - Anesthesia
 
 **Materials**
     
